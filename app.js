@@ -1,7 +1,7 @@
 let datiOriginali = [];
 
 fetch("dati.json")
-  .then(r => r.json())
+  .then(response => response.json())
   .then(dati => {
 
     datiOriginali = dati.filter(item =>
@@ -29,7 +29,7 @@ function cerca() {
     .value
     .toLowerCase();
 
-  const giorno = document
+  const giornoSelezionato = document
     .getElementById("giornoFiltro")
     .value;
 
@@ -37,12 +37,12 @@ function cerca() {
 
     const matchNome =
       (item.Nome || "")
-      .toLowerCase()
-      .includes(testo);
+        .toLowerCase()
+        .includes(testo);
 
     const matchGiorno =
-      giorno === "" ||
-      item.giorno === giorno;
+      giornoSelezionato === "" ||
+      String(item.giorno).trim() === giornoSelezionato;
 
     return matchNome && matchGiorno;
 
@@ -57,4 +57,13 @@ function mostra(lista) {
   const contenitore =
     document.getElementById("contenitore");
 
-  contenitore.
+  contenitore.innerHTML = "";
+
+  lista.forEach(item => {
+
+    contenitore.innerHTML += `
+      <div class="card">
+
+        <h3>${item.Nome || ""}</h3>
+
+    
