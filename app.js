@@ -70,11 +70,15 @@ function mostra(lista) {
         href="dettaglio.html?id=${item._ComputedKey}"
       >
 
-        <div>
+        <div class="card">
+
+          <h3>${item.Nome || ""}</h3>
 
           <p>${item.Descrizione || ""}</p>
 
-          <p><strong>${item.Categoria || ""}</strong></p>
+          <p>
+            <strong>${item.Categoria || ""}</strong>
+          </p>
 
           <p>📍 ${item.Zona || ""}</p>
 
@@ -88,3 +92,4 @@ function mostra(lista) {
   });
 
 }
+``
