@@ -68,7 +68,9 @@ function mostra(lista) {
       <a
         class="card-link"
         href="dettaglio.html?id=${item._ComputedKey}"
-item.Nome || ""}</h3>
+      >
+
+        <div>
 
           <p>${item.Descrizione || ""}</p>
 
@@ -79,6 +81,7 @@ item.Nome || ""}</h3>
           <p>📅 Giorno ${item.giorno || ""}</p>
 
         </div>
+
       </a>
     `;
 
