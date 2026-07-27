@@ -63,17 +63,21 @@ function mostra(lista) {
 
   lista.forEach(item => {
 
-const card = `
-  <a class="card-link" href="dettagdKey}
-    <div class="card">
-      <h3>${item.Nome || ""}</h3>
-      <p>${item.Descrizione || ""}</p>
-      <p><strong>${item.Categoria || ""}</strong></p>
-      <p>📍 ${item.Zona || ""}</p>
-      <p>📅 Giorno ${item.giorno || ""}</p>
-    </div>
-  </a>
-`;
+    const card = `
+      <a class="card-link" href="dettaglio.}
+        <div class="card">
+          <h3>${item.Nome || ""}</h3>
+
+          <p>${item.Descrizione || ""}</p>
+
+          <p><strong>${item.Categoria || ""}</strong></p>
+
+          <p>📍 ${item.Zona || ""}</p>
+
+          <p>📅 Giorno ${item.giorno || ""}</p>
+        </div>
+      </a>
+    `;
 
     contenitore.innerHTML += card;
 
