@@ -1,22 +1,4 @@
-[
- {
-   "_RowNumber": "[Number]",
-   "giorno": "[Number]",
-   "Tappa": "[Number]",
-   "Nome tinerario": "[Text]",
-   "Zona": "[Text]",
-   "Nome": "[Text]",
-   "Descrizione": "[LongText]",
-   "Categoria": "[Enum]",
-   "Posizione": "[Address]",
-   "Come arrivare": "[Text]",
-   "Mezzi": "[EnumList]",
-   "Costo": "[Text]",
-   "Link": "[Url]",
-   "Voto": "[Enum]",
-   "Immagine 1": "[Image]",
-   "Immagine 2": "[Image]",
-   "_ComputedKey": "[Text] "
+
  },
  {
    "_RowNumber": "2",
