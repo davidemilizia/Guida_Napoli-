@@ -59,7 +59,13 @@ fetch("dati.json")
 
       <div class="card">
 
+      
+
         <h1>${luogo.Nome || ""}</h1>
+
+        ${luogo["Immagine 1"]
+
+        ? `<img src="${luogo["Immagine 1"]}" alt="${luogo.N}</h1>
 
         <p><strong>Categoria:</strong> ${luogo.Categoria || ""}</p>
 
