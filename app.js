@@ -23,16 +23,27 @@ function cerca() {
     .value
     .toLowerCase();
 
-  const filtrati = datiOriginali.filter(item =>
-    (item.Nome || "")
+  const giorno = document
+    .getElementById("giornoFiltro")
+    .value;
+
+  const filtrati = datiOriginali.filter(item => {
+
+    const matchNome =
+      (item.Nome || "")
       .toLowerCase()
-      .includes(testo)
-  );
+      .includes(testo);
+
+    const matchGiorno =
+      !giorno ||
+      item.giorno === giorno;
+
+    return matchNome && matchGiorno;
+  });
 
   mostra(filtrati);
 }
-
-function mostra(lista) {
+``
 
   const contenitore =
     document.getElementById("contenitore");
