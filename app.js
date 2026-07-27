@@ -68,7 +68,7 @@ function mostra(lista) {
       <a
         class="card-link"
         href="dettaglio.html?id=${item._ComputedKey}"
-     Nome || ""}</h3>
+item.Nome || ""}</h3>
 
           <p>${item.Descrizione || ""}</p>
 
