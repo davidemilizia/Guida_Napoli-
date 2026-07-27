@@ -6,7 +6,8 @@ fetch("dati.json")
 
     datiOriginali = dati.filter(item =>
       item.Nome &&
-      item.Nome.trim() !== ""
+      item.Nome.trim() !== "" &&
+      item.Nome !== "[Text]"
     );
 
     mostra(datiOriginali);
@@ -14,6 +15,11 @@ fetch("dati.json")
     document
       .getElementById("search")
       .addEventListener("input", cerca);
+
+    document
+      .getElementById("giornoFiltro")
+      .addEventListener("change", cerca);
+
   });
 
 function cerca() {
@@ -35,38 +41,20 @@ function cerca() {
       .includes(testo);
 
     const matchGiorno =
-      !giorno ||
+      giorno === "" ||
       item.giorno === giorno;
 
     return matchNome && matchGiorno;
+
   });
 
   mostra(filtrati);
+
 }
-``
+
+function mostra(lista) {
 
   const contenitore =
     document.getElementById("contenitore");
 
-  contenitore.innerHTML = "";
-
-  lista.forEach(item => {
-
-    contenitore.innerHTML += `
-      <div class="card">
-        <h3>${item.Nome || ""}</h3>
-
-        <p>${item.Descrizione || ""}</p>
-
-        <p><strong>${item.Categoria || ""}</strong></p>
-
-        <p>📍 ${item.Zona || ""}</p>
-
-        <p>📅 Giorno ${item.giorno || ""}</p>
-
-        <p>💰 ${item.Costo || ""}</p>
-      </div>
-    `;
-  });
-
-}
+  contenitore.
