@@ -33,7 +33,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1": "images/Piazza-san-Domenico-Maggiore.jpg",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -52,7 +52,7 @@
    "Costo": "8",
    "Link": "https://domasandomenicomaggiore.it/",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1": "images/Basilica-di-San-Domenico-Maggiore.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:02"
  },
@@ -71,7 +71,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":  "images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -109,7 +109,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":  "images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -128,7 +128,7 @@
    "Costo": "",
    "Link": "https://storienapoli.it/2023/04/26/busto-di-pulcinella-che-portafortuna/",
    "Voto": "2",
-   "Immagine 1": "",
+   "Immagine 1":  "images/Busto-di-Pulcinella.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:04"
  },
@@ -147,7 +147,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":  "images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -166,7 +166,7 @@
    "Costo": "10",
    "Link": "https://www.napolisotterranea.org",
    "Voto": "4",
-   "Immagine 1": "",
+   "Immagine 1":  "images/Napoli-Sotterranea.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:05"
  },
@@ -185,7 +185,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":  "images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -204,7 +204,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":  "images/San-Gregorio-Armeno.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:06"
  },
@@ -223,7 +223,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":  "images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
