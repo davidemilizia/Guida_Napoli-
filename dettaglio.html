@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dettaglio luogo</title>
+</head>
+<body>
+
+<h1>Dettaglio luogo</h1>
+
+<div id="contenuto"></div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+document.getElementById("contenuto").innerHTML =
+  "<p>ID luogo: " + id + "</p>";
+
+</script>
+
+</body>
+</html>
