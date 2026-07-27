@@ -14,7 +14,7 @@
    "Costo": "Gratis",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "images/cristo-velato.jpg",
+   "Immagine 1": "Full size",
    "Immagine 2": "",
    "_ComputedKey": "01:01"
  },
@@ -90,7 +90,7 @@
    "Costo": "12",
    "Link": "https://www.museosansevero.it/",
    "Voto": "5",
-   "Immagine 1": "",
+  "Immagine 1": "images/cristo-velato.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:03"
  },
