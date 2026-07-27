@@ -1,25 +1,121 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dettaglio luogo</title>
+
+  <style>
+
+    body{
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background:#f5f5f5;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 2px 10px rgba(0,0,0,.15);
+    }
+
+    h1{
+      color:#1e88e5;
+      margin-top:0;
+    }
+
+    a.bottone{
+      display:inline-block;
+      margin-top:15px;
+      background:#1e88e5;
+      color:white;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:8px;
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-<h1>Dettaglio luogo</h1>
-
-<div id="contenuto"></div>
+<div id="contenuto">
+  Caricamento...
+</div>
 
 <script>
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-document.getElementById("contenuto").innerHTML =
-  "<p>ID luogo: " + id + "</p>";
+fetch("dati.json")
+  .then(response => response.json())
+  .then(dati => {
+
+    const luogo = dati.find(
+      item => item._ComputedKey === id
+    );
+
+    if (!luogo) {
+
+      document.getElementById("contenuto").innerHTML =
+        "<h2>Luogo non trovato</h2>";
+
+      return;
+    }
+
+    document.getElementById("contenuto").innerHTML = `
+
+      <div class="card">
+
+        <h1>${luogo.Nome || ""}</h1>
+
+        <p><strong>Categoria:</strong>
+        ${luogo.Categoria || ""}</p>
+
+        <p><strong>Zona:</strong>
+        ${luogo.Zona || ""}</p>
+
+        <p><strong>Giorno:</strong>
+        ${luogo.giorno || ""}</p>
+
+        <p><strong>Descrizione:</strong><br>
+        ${luogo.Descrizione || ""}</p>
+
+        <p><strong>Come arrivare:</strong><br>
+        ${luogo["Come arrivare"] || ""}</p>
+
+        <p><strong>Costo:</strong>
+        ${luogo.Costo || ""}</p>
+
+        <p><strong>Voto:</strong>
+        ${luogo.Voto || ""}</p>
+
+        ${
+          luogo.Link
+          ? `<a class="bottone"
+               href="${luogo.Link}"
+               target="_blank       }
+
+        <br><br>
+
+        index.html
+          ← Torna alla guida
+        </a>
+
+      </div>
+
+    `;
+
+  });
 
 </script>
 
 </body>
+
 </html>
