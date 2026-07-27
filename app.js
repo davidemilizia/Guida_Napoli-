@@ -63,8 +63,9 @@ function mostra(lista) {
 
   lista.forEach(item => {
 
-  const card = `
-  <a href="dettaglio.html?id=${item._ComputedKeyv class="card">
+const card = `
+  <a class="card-link" href="dettagdKey}
+    <div class="card">
       <h3>${item.Nome || ""}</h3>
       <p>${item.Descrizione || ""}</p>
       <p><strong>${item.Categoria || ""}</strong></p>
