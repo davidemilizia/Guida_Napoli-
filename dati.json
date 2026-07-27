@@ -231,7 +231,7 @@
    "_RowNumber": "8",
    "giorno": "1",
    "Tappa": "7",
-   "Nome tinerario": "Meseo e Bosco Capodimonte",
+   "Nome tinerario": "Museo e Bosco Capodimonte",
    "Zona": "Decumani/Centro Storico",
    "Nome": "La Locanda Gesù Vecchio (Civico 26)",
    "Descrizione": "X CELIACI. Ottima trattoria della tradizione napoletana a prezzi modici nel centro di Napoli.",
@@ -242,7 +242,7 @@
    "Costo": "",
    "Link": "https://www.lalocandagesuvecchionapoli.it/",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/La-Locanda-Gesù-Vecchio-(Civico-26).jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:07"
  },
@@ -261,7 +261,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -280,7 +280,7 @@
    "Costo": "",
    "Link": "https://www.laneapolissotterrata.it/",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Chiesa-di-Santa-Maria-della-Colonna.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:08"
  },
@@ -299,7 +299,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -318,7 +318,7 @@
    "Costo": "",
    "Link": "https://it.wikipedia.org/wiki/Chiesa_di_Santa_Maria_della_Colonna",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Chiesa-di-Santa-Maria-della-Colonna.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:09"
  },
@@ -337,7 +337,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -356,7 +356,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/",
    "Immagine 2": "",
    "_ComputedKey": "01:10"
  },
@@ -375,7 +375,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
