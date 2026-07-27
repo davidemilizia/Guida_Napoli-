@@ -52,6 +52,7 @@ function cerca() {
   });
 
   mostra(filtrati);
+
 }
 
 function mostra(lista) {
@@ -63,10 +64,11 @@ function mostra(lista) {
 
   lista.forEach(item => {
 
-    const card = `
-      <a class="card-link" href="dettaglio.}
-        <div class="card">
-          <h3>${item.Nome || ""}</h3>
+    contenitore.innerHTML += `
+      <a
+        class="card-link"
+        href="dettaglio.html?id=${item._ComputedKey}"
+     Nome || ""}</h3>
 
           <p>${item.Descrizione || ""}</p>
 
@@ -75,11 +77,10 @@ function mostra(lista) {
           <p>📍 ${item.Zona || ""}</p>
 
           <p>📅 Giorno ${item.giorno || ""}</p>
+
         </div>
       </a>
     `;
-
-    contenitore.innerHTML += card;
 
   });
 
