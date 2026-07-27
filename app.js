@@ -6,7 +6,7 @@ fetch("dati.json")
 
     datiOriginali = dati.filter(item =>
       item.Nome &&
-      item.Nome.trim() !== "" &&
+      item.Nome !== "" &&
       item.Nome !== "[Text]"
     );
 
@@ -20,29 +20,32 @@ fetch("dati.json")
       .getElementById("giornoFiltro")
       .addEventListener("change", cerca);
 
+  })
+  .catch(error => {
+    console.error(error);
   });
 
 function cerca() {
 
-  const testo = document
-    .getElementById("search")
+  const testo =
+    document.getElementById("search")
     .value
     .toLowerCase();
 
-  const giornoSelezionato = document
-    .getElementById("giornoFiltro")
+  const giorno =
+    document.getElementById("giornoFiltro")
     .value;
 
   const filtrati = datiOriginali.filter(item => {
 
     const matchNome =
       (item.Nome || "")
-        .toLowerCase()
-        .includes(testo);
+      .toLowerCase()
+      .includes(testo);
 
     const matchGiorno =
-      giornoSelezionato === "" ||
-      String(item.giorno).trim() === giornoSelezionato;
+      giorno === "" ||
+      String(item.giorno).trim() === giorno;
 
     return matchNome && matchGiorno;
 
@@ -61,9 +64,17 @@ function mostra(lista) {
 
   lista.forEach(item => {
 
-    contenitore.innerHTML += `
+    const card = `
       <div class="card">
-
         <h3>${item.Nome || ""}</h3>
+        <p>${item.Descrizione || ""}</p>
+        <p><strong>${item.Categoria || ""}</strong></p>
+        <p>📍 ${item.Zona || ""}</p>
+        <p>📅 Giorno ${item.giorno || ""}</p>
+      </div>
+    `;
 
-    
+    contenitore.innerHTML += card;
+  });
+
+}
