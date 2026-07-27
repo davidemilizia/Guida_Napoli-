@@ -27,13 +27,13 @@ fetch("dati.json")
 
 function cerca() {
 
-  const testo =
-    document.getElementById("search")
+  const testo = document
+    .getElementById("search")
     .value
     .toLowerCase();
 
-  const giorno =
-    document.getElementById("giornoFiltro")
+  const giorno = document
+    .getElementById("giornoFiltro")
     .value;
 
   const filtrati = datiOriginali.filter(item => {
@@ -52,7 +52,6 @@ function cerca() {
   });
 
   mostra(filtrati);
-
 }
 
 function mostra(lista) {
