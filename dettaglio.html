@@ -1,31 +1,45 @@
+const fotoHtml =
+luogo["Immagine 1"] && luogo["Immagine 1"] !== ""
+? `<img class="foto" src="${luogo["Immagine 1"]}" alt="${luogo.Nto").innerHTML = .
+
+**Cancella tutto `dettaglio.html` e sostituiscilo con questo:**
+
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dettaglio luogo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dettaglio luogo</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #f5f5f5;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f5f5f5;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.15);
-    }
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
 
-    h1 {
-      color: #1e88e5;
-    }
-  </style>
+h1 {
+  color: #1e88e5;
+}
 
+.foto {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+</style>
 </head>
 
 <body>
@@ -40,78 +54,83 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 fetch("dati.json")
-  .then(response => response.json())
-  .then(dati => {
+.then(response => response.json())
+.then(dati => {
 
-    const luogo = dati.find(
-      item => item._ComputedKey === id
-    );
+  const luogo = dati.find(
+    item => item._ComputedKey === id
+  );
 
-    if (!luogo) {
-
-      document.getElementById("contenuto").innerHTML =
-        "<h2>Luogo non trovato</h2>";
-
-      return;
-    }
-
-    document.getElementById("contenuto").innerHTML = `
-
-      <div class="card">
-
-      
-
-      <img src="${luogo['Immagine 1'] ||${luogo.Nome || ""}</h1>
-
-        ${luogo["Immagine 1"]
-
-        ? `<img src="${luogo["Immagine 1"]}" alt="${luogo.N}</h1>
-
-        <p><strong>Categoria:</strong> ${luogo.Categoria || ""}</p>
-
-        <p><strong>Zona:</strong> ${luogo.Zona || ""}</p>
-
-        <p><strong>Giorno:</strong> ${luogo.giorno || ""}</p>
-
-        <p>
-          <strong>Descrizione:</strong><br>
-          ${luogo.Descrizione || ""}
-        </p>
-
-        <p>
-          <strong>Come arrivare:</strong><br>
-          ${luogo["Come arrivare"] || ""}
-        </p>
-
-        <p>
-          <strong>Costo:</strong>
-          ${luogo.Costo || ""}
-        </p>
-
-        <p>
-          <strong>Voto:</strong>
-          ${luogo.Voto || ""}
-        </p>
-
-        <br>
-
-        index.html
-          ← Torna alla guida
-        </a>
-
-      </div>
-
-    `;
-
-  })
-  .catch(error => {
-
+  if (!luogo) {
     document.getElementById("contenuto").innerHTML =
-      "<h2>Errore durante il caricamento</h2>";
+      "<h2>Luogo non trovato</h2>";
+    return;
+  }
 
-    console.error(error);
+  let fotoHtml = "";
 
-  });
+  if (luogo["Immagine 1"]) {
+    fotoHtml =
+      '<img class="foto" src="' +
+      luogo["Immagine 1"] +
+      '" alt="' +
+      luogo.Nome +
+      '">';
+  }
+
+  document.getElementById("contenuto").innerHTML = `
+
+    <div class="card">
+
+      ${fotoHtml}
+
+      <h1>${luogo.Nome || ""}</h1>
+
+      <p><strong>Categoria:</strong> ${luogo.Categoria || ""}</p>
+
+      <p><strong>Zona:</strong> ${luogo.Zona || ""}</p>
+
+      <p><strong>Giorno:</strong> ${luogo.giorno || ""}</p>
+
+      <p>
+        <strong>Descrizione:</strong><br>
+        ${luogo.Descrizione || ""}
+      </p>
+
+      <p>
+        <strong>Come arrivare:</strong><br>
+        ${luogo["Come arrivare"] || ""}
+      </p>
+
+      <p>
+        <strong>Costo:</strong>
+        ${luogo.Costo || ""}
+      </p>
+
+      <p>
+        <strong>Voto:</strong>
+        ${luogo.Voto || ""}
+      </p>
+
+      <br>
+
+     <a href="index.html">
+        ← Torna alla guida
+      </a>
+
+    </div>
+
+  `;
+
+})
+.catch(error => {
+
+  document.getElementById("contenuto").innerHTML =
+    "<h2>Errore durante il caricamento</h2>";
+
+  console.error(error);
+
+});
 
 </script>
 
