@@ -66,52 +66,48 @@ fetch("dati.json")
       return;
     }
 
-    document.getElementById("contenuto").innerHTML = `
+   document.getElementById("contenuto").innerHTML = `
 
-      <div class="card">
+<div class="card">
 
-        ${
-          luogo["Immagine 1"]
-          ? `<img src="${luogo["Immagine      }
+  <h1>${luogo.Nome || ""}</h1>
 
-        <h1>${luogo.Nome || ""}</h1>
+  <p><strong>Categoria:</strong> ${luogo.Categoria || ""}</p>
 
-        <p><strong>Categoria:</strong> ${luogo.Categoria || ""}</p>
+  <p><strong>Zona:</strong> ${luogo.Zona || ""}</p>
 
-        <p><strong>Zona:</strong> ${luogo.Zona || ""}</p>
+  <p><strong>Giorno:</strong> ${luogo.giorno || ""}</p>
 
-        <p><strong>Giorno:</strong> ${luogo.giorno || ""}</p>
+  <p>
+    <strong>Descrizione:</strong><br>
+    ${luogo.Descrizione || ""}
+  </p>
 
-        <p>
-          <strong>Descrizione:</strong><br>
-          ${luogo.Descrizione || ""}
-        </p>
+  <p>
+    <strong>Come arrivare:</strong><br>
+    ${luogo["Come arrivare"] || ""}
+  </p>
 
-        <p>
-          <strong>Come arrivare:</strong><br>
-          ${luogo["Come arrivare"] || ""}
-        </p>
+  <p>
+    <strong>Costo:</strong>
+    ${luogo.Costo || ""}
+  </p>
 
-        <p>
-          <strong>Costo:</strong>
-          ${luogo.Costo || ""}
-        </p>
+  <p>
+    <strong>Voto:</strong>
+    ${luogo.Voto || ""}
+  </p>
 
-        <p>
-          <strong>Voto:</strong>
-          ${luogo.Voto || ""}
-        </p>
+  <br>
 
-        <br>
+  <a href="index.html">
+    ← Torna alla guida
+  </a>
 
-        index.html
-          ← Torna alla guida
-        </a>
+</div>
 
-      </div>
-
-    `;
-
+`;
+    
   })
   .catch(error => {
 
