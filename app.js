@@ -75,6 +75,7 @@ function mostra(lista) {
     `;
 
     contenitore.innerHTML += card;
+
   });
 
 }
