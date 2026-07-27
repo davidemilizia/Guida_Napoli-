@@ -24,15 +24,8 @@
     h1 {
       color: #1e88e5;
     }
-
-    img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
   </style>
+
 </head>
 
 <body>
@@ -55,19 +48,16 @@ fetch("dati.json")
     );
 
     if (!luogo) {
+
       document.getElementById("contenuto").innerHTML =
         "<h2>Luogo non trovato</h2>";
+
       return;
     }
 
     document.getElementById("contenuto").innerHTML = `
 
       <div class="card">
-
-        ${
-          luogo["Immagine 1"]
-            ? `<img src="${          : ""
-        }
 
         <h1>${luogo.Nome || ""}</h1>
 
@@ -99,7 +89,7 @@ fetch("dati.json")
 
         <br>
 
-        <adex.html
+        index.html
           ← Torna alla guida
         </a>
 
