@@ -432,7 +432,7 @@
    "Costo": "Gratis",
    "Link": "https://www.cattedraledinapoli.it",
    "Voto": "5",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Duomo-di-Napoli.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:12"
  },
@@ -470,7 +470,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Murales-San-Gennaro-di-Jorit.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:13"
  },
@@ -508,7 +508,7 @@
    "Costo": "Gratis",
    "Link": "https://www.napoli-turistica.com/spaccanapoli",
    "Voto": "5",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Spaccanapoli.jpg",
    "Immagine 2": "",
    "_ComputedKey": "01:14"
  },
@@ -546,7 +546,7 @@
    "Costo": "Gratis",
    "Link": "",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Piazza-san-Domenico-Maggiore.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:01"
  },
@@ -584,7 +584,7 @@
    "Costo": "",
    "Link": "https://www.monasterodisantachiara.it/",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Complesso-Monumentale-di-Santa-Chiara.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:02"
  },
@@ -622,7 +622,7 @@
    "Costo": "",
    "Link": "https://www.monasterodisantachiara.it/",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Chiostro-di-Santa-Chiara.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:03"
  },
@@ -660,7 +660,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Chiesa-del-Gesù-Nuovo.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:04"
  },
@@ -698,7 +698,7 @@
    "Costo": "",
    "Link": "https://santamarialanova.com/",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Chiesa-di-Santa-Maria-la-Nova.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:05"
  },
@@ -736,7 +736,7 @@
    "Costo": "Gratis",
    "Link": "https://www.santannadeilombardi.com/it/",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Complesso-Monumentale-Sant'Anna-dei-Lombardi.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:06"
  },
@@ -774,7 +774,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1":"images/",
+   "Immagine 1":"images/Trattoria-da-Nennella.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:07"
  },
@@ -812,7 +812,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Via-Toledo.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:08"
  },
@@ -831,7 +831,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -850,7 +850,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Quartieri-Spagnoli.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:09"
  },
@@ -869,7 +869,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -888,7 +888,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Murales-Maradona.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:10"
  },
@@ -907,7 +907,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -926,7 +926,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Pasticceria-Poppella.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:11"
  },
@@ -945,7 +945,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -964,7 +964,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Galleria-Umberto-I.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:12"
  },
@@ -983,7 +983,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -1002,7 +1002,7 @@
    "Costo": "",
    "Link": "https://www.teatrosancarlo.it/",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/Teatro-san-Carlo.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:13"
  },
@@ -1021,7 +1021,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -1040,7 +1040,7 @@
    "Costo": "Gratis",
    "Link": "https://www.napoli-turistica.com/piazza-del-plebiscito",
    "Voto": "5",
-   "Immagine 1": "",
+   "Immagine 1":"images/Piazza-del-Plebiscito.jpg",
    "Immagine 2": "",
    "_ComputedKey": "02:14"
  },
@@ -1059,7 +1059,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "Full size",
+   "Immagine 1":"images/",
    "Immagine 2": "Full size",
    "_ComputedKey": ""
  },
@@ -1078,7 +1078,7 @@
    "Costo": "",
    "Link": "",
    "Voto": "",
-   "Immagine 1": "",
+   "Immagine 1":"images/",
    "Immagine 2": "",
    "_ComputedKey": "02:15"
  },
