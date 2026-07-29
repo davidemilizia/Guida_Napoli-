@@ -28,6 +28,11 @@ h1 {
   padding: 20px;
 }
 
+#categoriaFiltro {
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
 .card-link {
   text-decoration: none;
   color: inherit;
