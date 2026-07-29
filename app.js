@@ -81,10 +81,10 @@ function mostra(lista) {
 
     if (item["Immagine 1"]) {
       miniatura =
-        `<img class="miniatura"
-              src="${item["Immagine 1"]}"
-          d-link"
-        href="dettaglio.html?id=${item._ComputedKey}"
+        '<img class="miniatura" src="' +
+        item["Immagine 1"] +
+        '" alt="' +
+        item.N      href="dettaglio.html?id=${item._ComputedKey}"
       >
 
         <div class="card">
