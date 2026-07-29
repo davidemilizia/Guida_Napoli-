@@ -105,6 +105,16 @@ fetch("dati.json")
         <strong>Voto:</strong>
         ${luogo.Voto || ""}
       </p>
+      ${luogo.Link ?
+  `
+  <p>
+    <a href="${k}
+      🌐 Sito ufficiale
+    </a>
+  </p>
+  `
+  : ""
+}
 
       <br>
 
