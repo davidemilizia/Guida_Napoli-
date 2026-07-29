@@ -29,16 +29,20 @@ fetch("dati.json")
 
 function cerca() {
 
-  const testo = document
-    .getElementById("search")
+  const testo =
+    document.getElementById("search")
     .value
     .toLowerCase();
 
-  const giorno = document
-    .getElementById("giornoFiltro")
+  const giorno =
+    document.getElementById("giornoFiltro")
     .value;
-   const categoria =
-   document.getElementById("categoriaFiltro").value;
+
+  const categoria =
+    document.getElementById("categoriaFiltro")
+    .value;
+
+  const filtrati = datiOriginali.filter(item => {
 
     const matchNome =
       (item.Nome || "")
@@ -48,17 +52,20 @@ function cerca() {
     const matchGiorno =
       giorno === "" ||
       String(item.giorno).trim() === giorno;
-      const matchCategoria =
+
+    const matchCategoria =
       categoria === "" ||
-      item.Categoria === categoria;
-  
+      (item.Categoria || "").trim() === categoria;
+
     return matchNome &&
-       matchGiorno &&
-       matchCategoria;
+           matchGiorno &&
+           matchCategoria;
 
   });
 
   mostra(filtrati);
+
+}
 
 }
 
