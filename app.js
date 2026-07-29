@@ -67,7 +67,6 @@ function cerca() {
 
 }
 
-}
 
 function mostra(lista) {
 
