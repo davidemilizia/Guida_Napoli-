@@ -19,7 +19,9 @@ fetch("dati.json")
     document
       .getElementById("giornoFiltro")
       .addEventListener("change", cerca);
-
+    document
+    .getElementById("categoriaFiltro")
+    .addEventListener("change", cerca);
   })
   .catch(error => {
     console.error(error);
@@ -35,8 +37,8 @@ function cerca() {
   const giorno = document
     .getElementById("giornoFiltro")
     .value;
-
-  const filtrati = datiOriginali.filter(item => {
+   const categoria =
+   document.getElementById("categoriaFiltro").value;
 
     const matchNome =
       (item.Nome || "")
@@ -46,8 +48,13 @@ function cerca() {
     const matchGiorno =
       giorno === "" ||
       String(item.giorno).trim() === giorno;
-
-    return matchNome && matchGiorno;
+      const matchCategoria =
+      categoria === "" ||
+      item.Categoria === categoria;
+  
+    return matchNome &&
+       matchGiorno &&
+       matchCategoria;
 
   });
 
