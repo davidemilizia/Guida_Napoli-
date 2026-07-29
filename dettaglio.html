@@ -115,21 +115,22 @@ fetch("dati.json")
         ${luogo.Voto || ""}
       </p>
 
-     ${
-     luogo.Link
-     ? `
-      <p>
-        ${luogo.Link}
-        🌐 Sito ufficiale
-        </a>
-      </p>
-      `
-    : ""
-    }
+      ${
+        luogo.Link
+          ? `
+            <p>
+              ${luogo.Link}
+                🌐 Sito ufficiale
+              </a>
+            </p>
+          `
+          : ""
+      }
+
       <br>
 
-      <a href="index.html">
-      ← Torna alla guida
+      <a hreftml
+        ← Torna alla guida
       </a>
 
     </div>
