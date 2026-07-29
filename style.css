@@ -51,6 +51,11 @@ h1 {
 
 .card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+}
+
+.card:hover {
+  transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
