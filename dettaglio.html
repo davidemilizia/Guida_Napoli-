@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -32,6 +31,16 @@ h1 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.bottone-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 </style>
 </head>
@@ -105,20 +114,22 @@ fetch("dati.json")
         <strong>Voto:</strong>
         ${luogo.Voto || ""}
       </p>
-      ${luogo.Link ?
-  `
-  <p>
-    <a href="${k}
-      🌐 Sito ufficiale
-    </a>
-  </p>
-  `
-  : ""
-}
+
+      ${
+        luogo.Link
+          ? `
+            <p>
+              <a
+                class="bottoneSito ufficiale
+              </a>
+            </p>
+          `
+          : ""
+      }
 
       <br>
 
-     <a href="index.html">
+      index.html
         ← Torna alla guida
       </a>
 
