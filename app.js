@@ -77,13 +77,19 @@ function mostra(lista) {
 
   lista.forEach(item => {
 
-    contenitore.innerHTML += `
-      <a
-        class="card-link"
+    let miniatura = "";
+
+    if (item["Immagine 1"]) {
+      miniatura =
+        `<img class="miniatura"
+              src="${item["Immagine 1"]}"
+          d-link"
         href="dettaglio.html?id=${item._ComputedKey}"
       >
 
         <div class="card">
+
+          ${miniatura}
 
           <h3>${item.Nome || ""}</h3>
 
