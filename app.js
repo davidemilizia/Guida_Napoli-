@@ -85,6 +85,12 @@ function mostra(lista) {
 
         <div class="card">
 
+          ${
+            item["Immagine 1"]
+              ? `${item[`
+              : ""
+          }
+
           <h3>${item.Nome || ""}</h3>
 
           <p>${item.Descrizione || ""}</p>
@@ -105,4 +111,3 @@ function mostra(lista) {
   });
 
 }
-``
