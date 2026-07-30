@@ -74,3 +74,78 @@ h1 {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+header {
+  background: #1e88e5;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#search,
+#giornoFiltro,
+#categoriaFiltro {
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 42px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+#contenitore {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+  /* IMPORTANTE: Per fare in modo che l'immagine rispetti gli angoli arrotondati della card */
+  overflow: hidden; 
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1e88e5;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+/* Gestione dell'immagine della miniatura dentro la card */
+.card img.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin: -15px -15px 15px -15px; /* Fa estendere l'immagine da bordo a bordo della scheda */
+  width: calc(100% + 30px);
+}
