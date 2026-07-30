@@ -85,6 +85,9 @@ function mostra(lista) {
 
         <div class="card">
 
+          <!-- AGGIUNGI QUESTA RIGA PER LA MINIATURA -->
+          <img src="${item["Immagine 1"] || ''}" alt="${item.Nome || ''}" class="card-img-top">
+
           <h3>${item.Nome || ""}</h3>
 
           <p>${item.Descrizione || ""}</p>
