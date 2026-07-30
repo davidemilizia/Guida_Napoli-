@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dettaglio luogo</title>
 
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -31,6 +34,15 @@ h1 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+/* Stile per il contenitore della mappa */
+#map {
+  height: 350px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .bottone-link {
@@ -67,8 +79,10 @@ h1 {
   Caricamento...
 </div>
 
-<script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+<script>
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
@@ -143,6 +157,10 @@ fetch("dati.json")
           : ""
       }
 
+      <!-- Contenitore della Mappa -->
+      <h3>Posizione</h3>
+      <div id="map"></div>
+
       <br>
 
       <a href="index.html" class="btn-home">⬅ Torna alla Home</a>
@@ -151,11 +169,26 @@ fetch("dati.json")
 
   `;
 
+  // Inizializzazione della mappa Leaflet dopo che il div è stato inserito nel DOM
+  // (Nota: se nel tuo JSON hai i campi Latitudine e Longitudine, puoi sostituire i numeri fissi con luogo.Latitudine e luogo.Longitudine)
+  const lat = luogo.Latitudine || 40.8518; // Default su Napoli se mancano
+  const lon = luogo.Longitudine || 14.2681;
+
+  var map = L.map('map').setView([lat, lon], 15);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  var marker = L.marker([lat, lon]).addTo(map);
+  marker.bindPopup(`<b>${luogo.Nome || "Luogo"}</b><br>${luogo.Zona || ""}`).openPopup();
+
 })
 .catch(error => {
 
   document.getElementById("contenuto").innerHTML =
-    "<h2>Errore durante il caricamento</h2>";
+    <h2>Errore durante il caricamento</h2>;
 
   console.error(error);
 
