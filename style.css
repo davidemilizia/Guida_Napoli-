@@ -149,3 +149,18 @@ h1 {
   margin: -15px -15px 15px -15px; /* Fa estendere l'immagine da bordo a bordo della scheda */
   width: calc(100% + 30px);
 }
+.btn-home {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+.btn-home:hover {
+  background-color: #1565c0;
+}
