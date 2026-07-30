@@ -169,10 +169,15 @@ fetch("dati.json")
 
   `;
 
-  // Inizializzazione della mappa Leaflet dopo che il div è stato inserito nel DOM
-  // (Nota: se nel tuo JSON hai i campi Latitudine e Longitudine, puoi sostituire i numeri fissi con luogo.Latitudine e luogo.Longitudine)
-  const lat = luogo.Latitudine || 40.8518; // Default su Napoli se mancano
-  const lon = luogo.Longitudine || 14.2681;
+  // Estrae latitudine e longitudine dal campo "Posizione" del JSON (es. "40.8505, 14.2536")
+  let lat = 40.8518; // Default Napoli
+  let lon = 14.2681;
+
+  if (luogo.Posizione && luogo.Posizione.includes(",")) {
+    const coords = luogo.Posizione.split(",");
+    lat = parseFloat(coords[0].trim());
+    lon = parseFloat(coords[1].trim());
+  }
 
   var map = L.map('map').setView([lat, lon], 15);
 
@@ -188,7 +193,7 @@ fetch("dati.json")
 .catch(error => {
 
   document.getElementById("contenuto").innerHTML =
-    <h2>Errore durante il caricamento</h2>;
+    "<h2>Errore durante il caricamento</h2>";
 
   console.error(error);
 
