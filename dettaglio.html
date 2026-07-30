@@ -42,6 +42,22 @@ h1 {
   border-radius: 8px;
   margin-top: 10px;
 }
+
+.btn-home {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+.btn-home:hover {
+  background-color: #1565c0;
+}
 </style>
 </head>
 
@@ -119,7 +135,7 @@ fetch("dati.json")
         luogo.Link
           ? `
             <p>
-              ${luogo.Link}
+              <a href="${luogo.Link}" target="_blank" class="bottone-link">
                 🌐 Sito ufficiale
               </a>
             </p>
@@ -129,9 +145,7 @@ fetch("dati.json")
 
       <br>
 
-      <a hreftml
-        ← Torna alla guida
-      </a>
+      <a href="index.html" class="btn-home">⬅ Torna alla Home</a>
 
     </div>
 
@@ -148,6 +162,6 @@ fetch("dati.json")
 });
 
 </script>
-<a href="index.html" class="btn-home">⬅ Torna alla Home</a>
+
 </body>
 </html>
